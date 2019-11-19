@@ -71,6 +71,7 @@
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     
     YMSNavigationController *navigationController = [[YMSNavigationController alloc] initWithRootViewController:pickerViewController];
+    [navigationController setModalPresentationStyle: UIModalPresentationFullScreen];
     
     if (status == PHAuthorizationStatusAuthorized) {
         pickerViewController.delegate = delegate;
